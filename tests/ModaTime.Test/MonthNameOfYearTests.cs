@@ -5,7 +5,7 @@ using System;
 using System.Collections;
 using System.Globalization;
 
-namespace JodaTimeLib.Test
+namespace ModaTime.Test
 {
     class MonthTextOfYearTests
     {

@@ -4,7 +4,7 @@ using NUnit.Framework;
 using System;
 using System.Collections;
 
-namespace JodaTimeLib.Test
+namespace ModaTime.Test
 {
     class IsBeforeTests
     {

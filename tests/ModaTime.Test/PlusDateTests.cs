@@ -3,7 +3,7 @@ using ModaTime;
 using NUnit.Framework;
 using System;
 
-namespace JodaTimeLib.Test
+namespace ModaTime.Test
 {
     public class PlusDateTests
     {
