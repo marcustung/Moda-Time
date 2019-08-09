@@ -223,5 +223,75 @@ namespace ModaTime
         {
             return DateTime.Compare(source, target) == 0;
         }
+        /// <summary>
+        /// Compares two instances of DateTime
+        /// </summary>
+        /// <param name="source"></param>
+        /// <param name="target"></param>
+        /// <returns>TimeSpan</returns>
+        public static TimeSpan Compare(this DateTime source, DateTime target)
+        {
+            return CompareDiffDate(source, target);
+        }
+        /// <summary>
+        /// Compares two instances of DateTime
+        /// </summary>
+        /// <param name="source"></param>
+        /// <param name="target"></param>
+        /// <returns>TotalDays</returns>
+        public static double GetCompareTotalDays(this DateTime source, DateTime target)
+        {
+            return CompareDiffDate(source, target).TotalDays;
+        }
+        /// <summary>
+        /// Compares two instances of DateTime
+        /// </summary>
+        /// <param name="source"></param>
+        /// <param name="target"></param>
+        /// <returns>TotalHours</returns>
+        public static double GetCompareTotalHours(this DateTime source, DateTime target)
+        {
+            return CompareDiffDate(source, target).TotalHours;
+        }
+        /// <summary>
+        /// Compares two instances of DateTime
+        /// </summary>
+        /// <param name="source"></param>
+        /// <param name="target"></param>
+        /// <returns>Minute</returns>
+        public static double GetCompareTotalMinute(this DateTime source, DateTime target)
+        {
+            return CompareDiffDate(source, target).TotalMinutes;
+        }
+        /// <summary>
+        /// Compares two instances of DateTime
+        /// </summary>
+        /// <param name="source"></param>
+        /// <param name="target"></param>
+        /// <returns>Second</returns>
+        public static double GetCompareTotalSecond(this DateTime source, DateTime target)
+        {
+            return CompareDiffDate(source, target).TotalSeconds;
+        }
+        /// <summary>
+        /// Compares two instances of DateTime
+        /// </summary>
+        /// <param name="source"></param>
+        /// <param name="target"></param>
+        /// <returns>Milliseconds</returns>
+        public static double GetCompareTotalMilliseconds(this DateTime source, DateTime target)
+        {
+            return CompareDiffDate(source, target).TotalMilliseconds;
+        }
+        /// <summary>
+        /// Compares two instances of DateTime
+        /// </summary>
+        /// <param name="source"></param>
+        /// <param name="target"></param>
+        /// <returns>TimeSpan</returns>
+        private static TimeSpan CompareDiffDate(DateTime source, DateTime target)
+        {
+            return new TimeSpan(source.Ticks - target.Ticks);
+        }
     }
 }
